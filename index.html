@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<audio controls>
+  
+</audio>
+
+<script>
+    const queryString = window.location.search;
+    console.log(queryString);
+    const urlParams = new URLSearchParams(queryString);
+    var aud = document.querySelector('audio');
+    aud.innerHTML = '<source src="'+ urlParams.get('url') +'" type="audio/mpeg">';
+</script>
+</body>
+</html>
