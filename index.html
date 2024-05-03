@@ -16,6 +16,8 @@
     const urlParams = new URLSearchParams(queryString);
     var aud = document.querySelector('audio');
     aud.innerHTML = '<source src="'+ urlParams.get('url') +'" type="audio/mpeg">';
+    aud.play();
+    aud.playbackRate = 2.5;
   
 </script>
 </body>
