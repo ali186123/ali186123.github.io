@@ -14,10 +14,8 @@
     const queryString = window.location.search;
     console.log(queryString);
     const urlParams = new URLSearchParams(queryString);
-    var aud = document.querySelector('audio');
-    aud.PlaybackRate = 3;
+    var aud = document.querySelector('audio').playbackRate = 2.5;
     aud.innerHTML = '<source src="'+ urlParams.get('url') +'" type="audio/mpeg">';
-    aud.PlaybackRate = 3;
 </script>
 </body>
 </html>
