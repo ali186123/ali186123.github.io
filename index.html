@@ -5,6 +5,20 @@
 <audio controls>
   
 </audio>
+
+
+   <div>
+        <button id="normal">
+            Back To Normal
+        </button>
+        <button id="superFast">
+            Super Fast
+        </button>
+        <button id="hyperFast">
+            Hyper Fast
+        </button>
+    </div>
+
 <style>
   body{
     display: flex; align-items: center; justify-content: center; height: 100vh
@@ -17,7 +31,20 @@
     var aud = document.querySelector('audio');
     aud.innerHTML = '<source src="'+ urlParams.get('url') +'" type="audio/mpeg">';
     aud.play();
-    aud.playbackRate = 2.5;
+
+
+  document.getElementById('normal').addEventListener('click', function () {
+            aud.playbackRate = 1;
+        }, false);
+
+        document.getElementById('superFast').addEventListener('click', function () {
+            aud.playbackRate = 2.5;
+        }, false);
+
+        document.getElementById('superFast').addEventListener('click', function () {
+            aud.playbackRate = 3;
+        }, false);
+
   
 </script>
 </body>
